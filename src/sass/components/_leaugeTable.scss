@@ -1,0 +1,69 @@
+.section-leauge {
+  background-color: burlywood;
+  align-items: center;
+  padding-bottom: 3rem;
+  position: relative;
+
+  @include respond(phone) {
+    // position: absolute;
+    // top: 400vh;
+    // left: 0;
+  }
+  &__heading {
+    font-size: 1.6rem;
+    color: black;
+    text-align: center;
+    padding: 3rem 0;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+  }
+  @include respond(phone) {
+    padding: 0;
+  }
+
+  &__info {
+    color: black;
+    font-size: 1.6rem;
+    padding-left: 10%;
+    padding-bottom: 1rem;
+  }
+
+  &__table {
+    color: black;
+    width: 85%;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    text-align: center;
+    display: table;
+    background-color: cadetblue;
+
+    @include respond(phone) {
+      padding: 0;
+      width: 100%;
+      font-size: 1.5em;
+    }
+
+    &__head {
+      text-decoration: underline;
+    }
+
+    &__head th {
+      width: 16%;
+    }
+
+    &__contents {
+      width: 100%;
+    }
+  }
+}
+
+.section-leauge-today {
+  @include respond(phone) {
+    background-color: burlywood;
+    // position: absolute;
+    // top: 730vh;
+    // left: 0;
+  }
+}

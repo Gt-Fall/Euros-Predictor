@@ -1,0 +1,119 @@
+.section-match-select {
+  &__box {
+    background-image: linear-gradient(
+      to bottom right,
+      $color-form-dark,
+      $color-form-light2
+    );
+    padding: 2rem;
+    color: $color-black;
+    width: 100%;
+
+    @include respond(phone) {
+      margin-top: 0;
+      padding: 1rem 1rem;
+      transform: none;
+      position: absolute;
+      top: 135rem;
+      left: 0;
+      height: fit-content;
+      width: fit-content;
+    }
+  }
+
+  &__form__match {
+    height: 25rem;
+    width: 30rem;
+    border: 2px solid black;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    display: inline-block;
+    box-shadow: 0 1rem 4rem rgba($color-black, 0.2);
+    background-color: $color-form-light2;
+
+    &__heading {
+      font-size: 2.2rem;
+      text-decoration: underline;
+    }
+  }
+
+  &__form__home,
+  &__form__away {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+
+  &__form__home__options,
+  &__form__away__options {
+    padding: 5px;
+    margin-left: 10px;
+  }
+
+  &__form_vs {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__submit {
+    width: 100%;
+    display: inline-block;
+
+    &__closed {
+      text-align: center;
+      font-size: 5rem;
+    }
+  }
+
+  &__submit__name,
+  &__submit__email {
+    box-shadow: 0 1rem 4rem rgba($color-black, 0.2);
+    height: 3rem;
+    margin: 2rem 2rem;
+
+    @include respond(phone) {
+      width: 80%;
+    }
+  }
+
+  &__submit__label {
+    font-size: 2rem;
+    color: Black;
+  }
+
+  &__submit__button {
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all 0.2s;
+      position: relative;
+      font-size: $default-font-size;
+
+      //Change for the <button> element
+      border: none;
+      cursor: pointer;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+  }
+}

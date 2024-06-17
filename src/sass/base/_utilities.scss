@@ -1,0 +1,48 @@
+.to_top_link {
+  text-align: center;
+
+  span {
+    color: black;
+    font-size: 2rem;
+    padding: 2rem 10rem;
+    text-align: center;
+    transition: all 0.3s;
+
+    @include respond(phone) {
+      padding: 1rem 5rem;
+      text-align: left;
+    }
+
+    &:hover {
+      color: gray;
+      transform: scale(110%);
+      text-decoration: underline;
+    }
+  }
+}
+
+.result-links {
+  text-align: center;
+
+  @include respond(phone) {
+    padding: 0.5rem 1rem;
+    text-decoration: underline;
+  }
+
+  span {
+    color: black;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+    font-weight: 700;
+
+    @include respond(phone) {
+      color: darkslategray;
+    }
+
+    &:hover {
+      color: navy;
+      transform: scale(110%);
+      text-decoration: underline;
+    }
+  }
+}

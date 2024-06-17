@@ -1,0 +1,46 @@
+.section-rules {
+  z-index: 0;
+  transform: translateY(-7rem);
+  height: 20rem;
+  width: 100%;
+  background-image: linear-gradient(
+    to right top,
+    $color-form-dark,
+    $color-form-light2
+  );
+  display: table;
+  padding: 2rem;
+  color: $color-black;
+  padding-top: 4rem;
+  margin-top: -5rem;
+
+  @include respond(phone) {
+    clip-path: none;
+    margin-top: 0;
+    padding: 1rem 1rem;
+    transform: none;
+    position: absolute;
+    top: 50rem;
+    left: 0;
+    height: 40rem;
+    width: fit-content;
+  }
+
+  &__left {
+    padding-top: 7rem;
+    width: 50%;
+    display: table-cell;
+  }
+
+  &__right {
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5rem 2rem;
+    padding-top: 7rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+}

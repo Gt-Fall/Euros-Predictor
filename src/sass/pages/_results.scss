@@ -1,0 +1,201 @@
+.results-body {
+  @include respond(phone) {
+    // display: flex;
+    // flex-direction: column;
+    float: left;
+  }
+}
+
+.section_information {
+  @include respond(phone) {
+    padding: 0;
+    hight: 60rem;
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // display: inline-block;
+  }
+
+  &__links {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      padding: 1rem 1rem;
+      width: 100%;
+      // display: inline-block;
+      transform: translateY(5rem);
+      position: relative;
+      display: inline-block;
+    }
+  }
+}
+
+.section-scores {
+  color: black;
+
+  @include respond(phone) {
+    z-index: 10000;
+    padding: none;
+    margin: 0;
+    width: 100%;
+
+    // display: flex;
+    // flex-direction: column;
+
+    // height: auto;
+    // position: absolute;
+    // top: 90vh;
+    // left: 0rem;
+  }
+
+  &__box {
+    background-color: lightgreen;
+    padding-top: 8rem;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    transform: translateY(-4rem);
+    margin-bottom: -4.5rem;
+    display: inline-block;
+
+    @include respond(phone) {
+      z-index: 10000;
+      padding-top: 53rem;
+      margin: 0;
+      width: 100%;
+      transform: translateY(2rem);
+      // height: auto;
+      // position: absolute;
+      // top: 58vh;
+      // left: 0rem;
+    }
+
+    &__heading {
+      text-align: center;
+      text-decoration: underline;
+      font-size: 2.6rem;
+    }
+
+    &__hidden {
+      visibility: hidden;
+      display: none;
+    }
+
+    &__match--1 {
+      height: 25rem;
+      width: 30rem;
+      border: 2px solid black;
+      padding: 1rem;
+      text-align: center;
+      margin: 1rem;
+      display: inline-block;
+      box-shadow: 0 1rem 4rem rgba($color-black, 0.2);
+
+      @include respond(phone) {
+        z-index: 10000;
+        height: auto;
+        width: 90%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      &__heading {
+        font-size: 2.2rem;
+        text-decoration: underline;
+      }
+
+      &__home,
+      &__away,
+      &__vs {
+        padding: 1rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.section-todays-matches {
+  background-color: lightsteelblue;
+  color: black;
+  text-align: center;
+  padding-top: 2rem;
+  @include respond(phone) {
+    width: 100%;
+    // position: absolute;
+    // top: 180vh;
+    // left: 0;
+  }
+
+  &__box {
+    padding-top: 1rem;
+    background-color: lightsteelblue;
+    text-align: center;
+
+    @include respond(phone) {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+}
+
+.match-table {
+  border: 3px solid black;
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 1rem;
+  color: black;
+  margin: 0 4rem;
+
+  @include respond(phone) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__contents {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: left;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  &__gap {
+    width: 5rem;
+  }
+}
+
+.section-yesterdays-guesses {
+  background-color: lightsteelblue;
+  color: black;
+  text-align: center;
+  padding-top: 2rem;
+  @include respond(phone) {
+    // position: absolute;
+    // top: 502vh;
+    // left: 0;
+  }
+
+  &__heading {
+    text-align: center;
+    color: black;
+  }
+
+  &__box {
+    padding-top: 1rem;
+    background-color: lightsteelblue;
+    text-align: center;
+
+    @include respond(phone) {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+}
