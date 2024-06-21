@@ -17,9 +17,9 @@ export default function TodaysTable({ predictions, matches, match1 }) {
       matches.map((played) => {
         if (played.matchPlayed) {
           if (
-            played.matchNumber == 5 ||
-            played.matchNumber == 6 ||
-            played.matchNumber == 7
+            played.matchNumber == 16 ||
+            played.matchNumber == 17 ||
+            played.matchNumber == 18
           ) {
             if (
               guess.homeGuesses.split(',')[played.matchNumber - 1] * 1 ==
@@ -91,6 +91,10 @@ export default function TodaysTable({ predictions, matches, match1 }) {
           <h2>👑 Daily Winners List 👑</h2>
           <p>Fri/Sat 15th: Amy F and Kerry F (8pts)</p>
           <p>Sun 16th: Nicola F and Steve B (11pts) </p>
+          <p>Mon 17th: Gorden S and Owen M (4pts) </p>
+          <p>Tue 18th: Pete F, Amy F and Andy Mac (6pts) </p>
+          <p>Wed 19th: Pete F and Steve R (11pts) </p>
+          <p>Thur 20th: Ruth D (11pts) </p>
         </div>
         <div class="section-leauge__table">
           <table class="section-leauge__table__contents">

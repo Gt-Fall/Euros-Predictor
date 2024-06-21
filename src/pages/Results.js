@@ -39,25 +39,25 @@ export default function Results({
               onClick={() => window.location.replace('#yesterdaysScores')}
               class="result-links"
             >
-              <span>Yesterdays Scores</span>
+              <span>🥅 Yesterdays Scores 🥅</span>
             </div>
             <div
               onClick={() => window.location.replace('#todaysPredictions')}
               class="result-links"
             >
-              <span>Todays Predictions</span>
+              <span>❓ Todays Predictions ❓</span>
             </div>
             <div
               onClick={() => window.location.replace('#leagueTable')}
               class="result-links"
             >
-              <span>Overall Table</span>
+              <span>🏆 Overall Table 🏆 </span>
             </div>
             <div
               onClick={() => window.location.replace('#todaysTable')}
               class="result-links"
             >
-              <span>Daily Table</span>
+              <span>🗓 Daily Table 🗓 </span>
             </div>
           </div>
         </div>

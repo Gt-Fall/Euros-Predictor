@@ -31,7 +31,7 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem; }
+  padding: 1.8rem; }
   @media only screen and (max-width: 37.5em) {
     body {
       padding: 0;
@@ -51,21 +51,30 @@ body {
   font-weight: 500; }
 
 .to_top_link {
-  text-align: center; }
+  text-align: center;
+  padding-top: 2rem;
+  transition: all 0.5s; }
+  @media only screen and (max-width: 37.5em) {
+    .to_top_link {
+      padding-bottom: 2rem; } }
   .to_top_link span {
+    background-color: cornflowerblue;
     color: black;
     font-size: 2rem;
-    padding: 2rem 10rem;
+    padding: 1rem;
     text-align: center;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    border: 3px solid navy;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 37.5em) {
       .to_top_link span {
         padding: 1rem 5rem;
         text-align: left; } }
-    .to_top_link span:hover {
-      color: gray;
-      transform: scale(110%);
-      text-decoration: underline; }
+  .to_top_link:hover {
+    color: gray;
+    transform: scale(110%);
+    text-decoration: underline;
+    transform: translateY(-3px); }
 
 .result-links {
   text-align: center; }
@@ -87,25 +96,45 @@ body {
       text-decoration: underline; }
 
 .section-leauge {
-  background-color: burlywood;
+  background-image: linear-gradient(to top left, lightsteelblue, steelblue);
   align-items: center;
   padding-bottom: 3rem;
   position: relative; }
   .section-leauge__heading {
-    font-size: 1.6rem;
-    color: black;
+    background-image: linear-gradient(to top right, cornsilk, whitesmoke);
+    color: #060663;
     text-align: center;
     padding: 3rem 0;
     padding-bottom: 2rem;
-    text-decoration: underline; }
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+    font-size: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .section-leauge__heading {
+        padding: 1.5rem;
+        font-size: 1.8rem; } }
   @media only screen and (max-width: 37.5em) {
     .section-leauge {
       padding: 0; } }
   .section-leauge__info {
     color: black;
     font-size: 1.6rem;
-    padding-left: 10%;
-    padding-bottom: 1rem; }
+    padding-left: 9%;
+    padding-bottom: 1rem;
+    padding-top: 3rem; }
+  .section-leauge__info-overall {
+    display: flex; }
+    @media only screen and (max-width: 37.5em) {
+      .section-leauge__info-overall {
+        display: block; } }
+    .section-leauge__info-overall__last-update {
+      padding-left: 45%; }
+      @media only screen and (max-width: 37.5em) {
+        .section-leauge__info-overall__last-update {
+          padding-left: 0;
+          padding-top: 2.5rem; } }
   .section-leauge__table {
     color: black;
     width: 85%;
@@ -115,7 +144,7 @@ body {
     font-size: 2rem;
     text-align: center;
     display: table;
-    background-color: cadetblue; }
+    background-color: blanchedalmond; }
     @media only screen and (max-width: 37.5em) {
       .section-leauge__table {
         padding: 0;
@@ -128,9 +157,11 @@ body {
     .section-leauge__table__contents {
       width: 100%; }
 
-@media only screen and (max-width: 37.5em) {
-  .section-leauge-today {
-    background-color: burlywood; } }
+.section-leauge-today {
+  background-image: linear-gradient(to top, pink, steelblue); }
+  @media only screen and (max-width: 37.5em) {
+    .section-leauge-today {
+      background-color: blanchedalmond; } }
 
 .section-match-select__box {
   background-image: linear-gradient(to bottom right, #3b338a, #aa93e9);
@@ -379,24 +410,30 @@ body {
   .results-body {
     float: left; } }
 
-@media only screen and (max-width: 37.5em) {
-  .section_information {
-    padding: 0;
-    hight: 60rem;
-    width: 100%; } }
-
-.section_information__links {
-  padding-left: 10%;
-  padding-right: 10%;
-  display: flex;
-  justify-content: space-between; }
+.section_information {
+  background-color: cornsilk; }
   @media only screen and (max-width: 37.5em) {
-    .section_information__links {
-      padding: 1rem 1rem;
-      width: 100%;
-      transform: translateY(5rem);
-      position: relative;
-      display: inline-block; } }
+    .section_information {
+      padding: 0;
+      hight: 60rem;
+      width: 100%; } }
+  .section_information__links {
+    padding-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between; }
+    .section_information__links :hover {
+      transition: all 0.3s ease;
+      text-decoration: underline;
+      transform: scale(115%); }
+    @media only screen and (max-width: 37.5em) {
+      .section_information__links {
+        padding: 1rem 1rem;
+        width: 100%;
+        transform: translateY(5rem);
+        position: relative;
+        display: inline-block; } }
 
 .section-scores {
   color: black; }
@@ -407,14 +444,15 @@ body {
       margin: 0;
       width: 100%; } }
   .section-scores__box {
-    background-color: lightgreen;
+    background-image: linear-gradient(to top, cornflowerblue, cornsilk);
     padding-top: 8rem;
     text-align: center;
     height: auto;
     width: 100%;
     transform: translateY(-4rem);
     margin-bottom: -4.5rem;
-    display: inline-block; }
+    display: inline-block;
+    padding-bottom: 3rem; }
     @media only screen and (max-width: 37.5em) {
       .section-scores__box {
         z-index: 10000;
@@ -423,13 +461,19 @@ body {
         width: 100%;
         transform: translateY(2rem); } }
     .section-scores__box__heading {
+      font-family: 'Permanent Marker', cursive;
+      font-weight: 400;
+      font-style: normal;
       text-align: center;
       text-decoration: underline;
-      font-size: 2.6rem; }
+      font-size: 4.5rem;
+      padding-bottom: 1.5rem;
+      color: #060663; }
     .section-scores__box__hidden {
       visibility: hidden;
       display: none; }
     .section-scores__box__match--1 {
+      background-color: blanchedalmond;
       height: 25rem;
       width: 30rem;
       border: 2px solid black;
@@ -454,30 +498,41 @@ body {
         font-size: 2rem; }
 
 .section-todays-matches {
-  background-color: lightsteelblue;
+  background-color: cornflowerblue;
   color: black;
   text-align: center;
   padding-top: 2rem; }
   @media only screen and (max-width: 37.5em) {
     .section-todays-matches {
       width: 100%; } }
+  .section-todays-matches h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+    padding: 3rem 0;
+    color: #060663;
+    text-decoration: underline; }
   .section-todays-matches__box {
     padding-top: 1rem;
-    background-color: lightsteelblue;
-    text-align: center; }
+    background-image: linear-gradient(to top, lightsteelblue, cornflowerblue);
+    text-align: center;
+    padding-bottom: 2rem; }
     @media only screen and (max-width: 37.5em) {
       .section-todays-matches__box {
         width: 80%;
         margin-left: 10%; } }
 
 .match-table {
+  background-color: blanchedalmond;
   border: 3px solid black;
   width: 25%;
   display: inline-block;
   text-align: center;
   padding-top: 1rem;
   color: black;
-  margin: 0 4rem; }
+  margin: 0 4rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 37.5em) {
     .match-table {
       width: 100%;
@@ -495,16 +550,23 @@ body {
     width: 5rem; }
 
 .section-yesterdays-guesses {
-  background-color: lightsteelblue;
+  background-color: pink;
   color: black;
   text-align: center;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  padding-bottom: 4rem; }
   .section-yesterdays-guesses__heading {
     text-align: center;
-    color: black; }
+    color: #060663;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+    font-size: 3.5rem;
+    padding-bottom: 3rem; }
   .section-yesterdays-guesses__box {
     padding-top: 1rem;
-    background-color: lightsteelblue;
+    background-color: pink;
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
       .section-yesterdays-guesses__box {

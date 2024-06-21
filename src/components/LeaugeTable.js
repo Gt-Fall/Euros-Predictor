@@ -10,6 +10,7 @@ export default function LeaugeTable({
   matches,
 }) {
   let position = 1;
+  let lastPlayed = '';
 
   function allScores() {
     predictions.map((guess) => {
@@ -25,6 +26,7 @@ export default function LeaugeTable({
 
       matches.map((played) => {
         if (played.matchPlayed) {
+          lastPlayed = `${played.homeTeam} vs ${played.awayTeam}`;
           if (
             guess.homeGuesses.split(',')[played.matchNumber - 1] * 1 ==
             played.homeResult
@@ -91,12 +93,15 @@ export default function LeaugeTable({
         <div class="section-leauge__heading">
           <h1>Overall Leauge Standings</h1>
         </div>
-        <div class="section-leauge__info">
+        <div class="section-leauge__info section-leauge__info-overall">
           <p>
             Just a reminder of the scoring: <br />
             + 1 point for the correct match outcome (winning team/draw) <br />
             + 1 point for each teams match goals predicted correctly <br />+ 2
             points if you get the scoreline correct{' '}
+          </p>
+          <p class="section-leauge__info-overall__last-update">
+            Last updated after: {lastPlayed}{' '}
           </p>
         </div>
         <div class="section-leauge__table">

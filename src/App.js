@@ -39,7 +39,7 @@ export default function App() {
     function () {
       function getYesterdaysMatches() {
         matches.forEach((match) => {
-          if (match.matchNumber === 5) {
+          if (match.matchNumber === 16) {
             setMatch1({
               matchDate: match.matchDate,
               matchNumber: match.matchNumber,
@@ -48,7 +48,7 @@ export default function App() {
               homeResult: match.homeResult,
               awayResult: match.awayResult,
             });
-          } else if (match.matchNumber === 6) {
+          } else if (match.matchNumber === 17) {
             setMatch2({
               matchDate: match.matchDate,
               matchNumber: match.matchNumber,
@@ -57,7 +57,7 @@ export default function App() {
               homeResult: match.homeResult,
               awayResult: match.awayResult,
             });
-          } else if (match.matchNumber === 7) {
+          } else if (match.matchNumber === 18) {
             setMatch3({
               matchDate: match.matchDate,
               matchNumber: match.matchNumber,
@@ -87,21 +87,21 @@ export default function App() {
     function () {
       function getTodaysMatches() {
         matches.forEach((match) => {
-          if (match.matchNumber === 8) {
+          if (match.matchNumber === 19) {
             setMatch5({
               matchDate: match.matchDate,
               matchNumber: match.matchNumber,
               homeTeam: match.homeTeam,
               awayTeam: match.awayTeam,
             });
-          } else if (match.matchNumber === 9) {
+          } else if (match.matchNumber === 20) {
             setMatch6({
               matchDate: match.matchDate,
               matchNumber: match.matchNumber,
               homeTeam: match.homeTeam,
               awayTeam: match.awayTeam,
             });
-          } else if (match.matchNumber === 10) {
+          } else if (match.matchNumber === 21) {
             setMatch7({
               matchDate: match.matchDate,
               matchNumber: match.matchNumber,
